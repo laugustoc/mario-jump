@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #333333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    border-bottom: 15px solid rgb(2, 151, 2);
+
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    animation: pipe-animation 3s infinite linear;
+}
+
+.mario  {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.nuvem {
+    position: absolute;
+    width: 350px;
+    top: 35px;
+    opacity: 80%;
+    right: -350px;
+    animation: nuvem-animation 7s infinite linear;
+}
+
+.acabou {
+    font-family:'Press Start 2P', cursive;
+    font-size: 26px;
+    position: absolute;
+    top: 50%;
+    margin-left: 650px;   
+    display: none;
+    border: 1px solid #ffffff;
+    padding: 20px;
+    background-color: rgb(218, 218, 218);
+}
+
+.resetar {
+    margin-left: 40%;
+    margin-top: 40px;
+    background: none;
+    border: none;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.resetar:hover {
+    background-color: rgb(2, 151, 2);
+}
+.resetar:active {
+    background-color: aqua;
+}
+
+.placar {
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: rgb(19, 17, 8);
+}
+
+.jump {
+    animation: jump 700ms ease-out;
+}
+
+
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes nuvem-animation {
+    from {
+        right: -350px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+
+
