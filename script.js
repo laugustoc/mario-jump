@@ -55,4 +55,5 @@ function alteraPlacar() {
     }
 }
 
+document.addEventListener ('click', jump);
 document.addEventListener ('keydown', jump);
