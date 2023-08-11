@@ -22,7 +22,7 @@
     bottom: 0;
     width: 80px;
     right: -80px;
-    animation: pipe-animation 3s infinite linear;
+    animation: pipe-animation 2.5s infinite linear;
 }
 
 .mario  {
@@ -73,9 +73,9 @@
 .placar {
     font-family: 'Press Start 2P', cursive;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    color: rgb(19, 17, 8);
+    top:30px;
+    left:30px;
+    
 }
 
 .jump {
@@ -119,4 +119,74 @@
 }
 
 
+@media (max-width: 600px) {
 
+    .game-board {
+        display: flex;
+        width: 100%;
+        height: 70vh;
+    }
+
+    .pipe {
+        width: 50px;
+        animation: pipe-animation 1s infinite linear;
+    }
+
+    .mario {
+        width: 100px;
+        
+    }
+    
+    .nuvem {
+        width: 300px;
+        animation: nuvem-animation 5s infinite linear;
+    }
+
+    .jump {
+        animation: jump-responsive 700ms ease-out;
+    }
+
+    .acabou {
+        font-family:'Press Start 2P', cursive;
+        width: 140px;
+        margin-left: 30%;
+        position: absolute;
+        top: 250px;
+    }
+
+    .resetar {
+        width: 50px;
+        margin-left: 30%;
+
+    }
+
+@keyframes jump-responsive {
+    0% {
+        bottom: 0;
+    }
+
+    30% {
+        bottom: 180px;
+    }
+
+    40% {
+        bottom: 200px;
+    }
+
+    50% {
+        bottom: 200px;
+    }
+
+    60% {
+        bottom: 200px;
+    }
+
+    70% {
+        bottom: 180px
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+}
